@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Domain", "SportsStore.Domain\SportsStore.Domain.csproj", "{07A9E4EF-0CEE-4CF7-AADB-BA50E2E99D37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.WebUI", "SportsStore.WebUI\SportsStore.WebUI.csproj", "{B884D8E5-8963-4239-B43B-C6F7E2924975}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportStore.UnitTest", "SportStore.UnitTest\SportStore.UnitTest.csproj", "{1EF25D21-FF96-4241-948F-D387AE634CF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7BAA2819-37BB-45D7-A2B4-E8141E2A87D8}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		SportsStore.vsmdi = SportsStore.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SportsStore.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07A9E4EF-0CEE-4CF7-AADB-BA50E2E99D37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A9E4EF-0CEE-4CF7-AADB-BA50E2E99D37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A9E4EF-0CEE-4CF7-AADB-BA50E2E99D37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A9E4EF-0CEE-4CF7-AADB-BA50E2E99D37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B884D8E5-8963-4239-B43B-C6F7E2924975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B884D8E5-8963-4239-B43B-C6F7E2924975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B884D8E5-8963-4239-B43B-C6F7E2924975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B884D8E5-8963-4239-B43B-C6F7E2924975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF25D21-FF96-4241-948F-D387AE634CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF25D21-FF96-4241-948F-D387AE634CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF25D21-FF96-4241-948F-D387AE634CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF25D21-FF96-4241-948F-D387AE634CF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

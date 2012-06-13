@@ -1,0 +1,147 @@
+/*
+body
+{
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+// Styles for basic forms
+-----------------------------------------------------------
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+/*.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}*/
+
+/*body { font-family:Cambria, Georgia, "Times New Roman"; margin: 0;}
+
+div#header div.title div.item H3, div.item h5, div.pager A { font: bold 1em "Arial Narrow"}
+
+div#header {background-color: Black; border-bottom: 2px solid #111; color: White}
+
+div.title {font-size: xx-large;}
+
+div#content {border-left:2px solid gray; margin-left: 9em; padding: 1em }
+*/
+
+div.header {background-color: #444; border: 2px solid #111; color: White;  padding-top: 50px; padding-bottom: 50px; }
+
+div.title { margin-left: 20px; font-size:xx-large; height: 100%}
+
+/*categories*/
+div#categories  
+{
+    width:38%;
+    height:100%;
+    float:left; 
+}
+/*categories*/
+
+/*item*/
+div.item 
+{
+    border-bottom: 2px dotted Gray;
+    width:100%;
+}
+/*item*/
+
+/*content*/
+div#content 
+{
+    height:100%;
+    width:60%;
+    float:left; 
+    border-left: 5px solid;
+    border-color: Gray;
+    padding-left: 20px;
+}
+/*content*/
+
+/* Pager */
+div.pager
+{
+    float: right;  
+    margin-top: 20px;  
+}
+
+div.pager a 
+{
+    padding: 6px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+div.pager a.hover 
+{
+    background-color: White; 
+    color:Blue;
+}
+div.pager a.selected 
+{
+    background-color:Blue;
+    color:White;
+}
+/* Pager */
+
