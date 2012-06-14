@@ -93,10 +93,31 @@ div.title { margin-left: 20px; font-size:xx-large; height: 100%}
 /*categories*/
 div#categories  
 {
-    width:38%;
+    width:20%;
     height:100%;
     float:left; 
 }
+
+div#categories A
+{
+    font: bold 1em "Arial Narrow";
+    font-size: xx-large;
+    border-bottom: 1px solid silver;   
+    text-decoration: none;
+    
+    padding: 20px;
+    display: block;
+    
+    background-color: White;
+    color: #666; 
+}
+
+div#categories a.selected 
+{
+    background-color: #666;
+    color: White;       
+}
+
 /*categories*/
 
 /*item*/
@@ -111,12 +132,28 @@ div.item
 div#content 
 {
     height:100%;
-    width:60%;
+    width:70%;
     float:left; 
     border-left: 5px solid;
     border-color: Gray;
     padding-left: 20px;
 }
+
+.post_form_button
+{
+    padding: 10px;
+    margin:20px;
+    color: White;
+    background-color: #333;
+    cursor:pointer;
+    border: 1px solid black;    
+}
+
+#post_form { width:20%; }
+
+#price_label { float:left; }
+
+
 /*content*/
 
 /* Pager */
@@ -145,3 +182,11 @@ div.pager a.selected
 }
 /* Pager */
 
+/*Cart*/
+tfoot td {border-top: 1px dotted black; font-weight:bold;}
+#card_title { padding: 20px;}
+#car_table_item { height: 40px;}
+#contunue_shopping_button {width: 20%; margin-left: 30%;}
+
+#contunue_shopping_button A { color:White; text-decoration:none;}
+/*Cart*/

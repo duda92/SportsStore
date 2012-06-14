@@ -1,7 +1,30 @@
 ﻿@model SportsStore.Domain.Entities.Product
+@using System.Drawing
 
 <div class = "item" >
     <h3>@Model.Name</h3>
     @Model.Description
-    <h4>@Model.Price</h4>
+    <br />
+    @{
+        byte[] imageData = null;
+        string imageBase64 = string.Empty;
+        string imageSrc = string.Empty;
+     }
+    @if (Model.Image != null)
+    {
+        imageData = Model.Image;
+        imageBase64 = Convert.ToBase64String(imageData);
+        imageSrc = string.Format("data:image/gif;base64,{0}", imageBase64);
+        <img src= "@imageSrc" width="150px" height="150px;"/> <br/>
+    }
+    
+    <h4 id="price">Price: @Model.Price</h4>
+
+    @using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post, new { id = "form"}))
+    {
+        @Html.HiddenFor(x => x.ProductId);
+        @Html.Hidden("returnUrl", Request.Url.PathAndQuery);
+        <input type="submit" value="+ Add to chart" class="post_form_button"/>
+    }
 </div>
+<br/>

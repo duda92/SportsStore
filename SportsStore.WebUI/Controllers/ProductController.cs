@@ -15,8 +15,10 @@ namespace SportsStore.WebUI.Controllers
 
         public int PageSize = 4;
         public string currentCategory;
+        
         public IEnumerable<Product> productsForDisplay;
         public PagingInfo pagingInfo;
+        public IEnumerable<Product> productsOfCategory;
 
         public ProductController(IProductRepository repo)
         {
@@ -25,8 +27,10 @@ namespace SportsStore.WebUI.Controllers
 
         public ViewResult List(string category, int page = 1)
         {
-            productsForDisplay = repository.Products.Where(p => category == null || p.Category == category).OrderBy(x => x.ProductId).Skip((page - 1) * PageSize).Take(PageSize);
-            pagingInfo = new PagingInfo { CurrentPage = page, ItemsPerPage = PageSize, TotalItems = repository.Products.Where(p => category == null || p.Category == category).OrderBy(x => x.ProductId).Count() };
+            productsOfCategory = repository.Products.Where(p => category == null || p.Category == category);
+            productsForDisplay = productsOfCategory.OrderBy(x => x.ProductId).Skip((page - 1) * PageSize).Take(PageSize);
+
+            pagingInfo = new PagingInfo { CurrentPage = page, ItemsPerPage = PageSize, TotalItems = productsOfCategory.Count() };
             
             ProductListViewModel viewModel = new ProductListViewModel
             {
@@ -34,8 +38,14 @@ namespace SportsStore.WebUI.Controllers
                 PagingInfo = pagingInfo
             };
             currentCategory = category;
+            viewModel.CurrentCategory = category;
             return View(viewModel);
         }
 
+        [HttpPost]
+        public string Hello()
+        {
+            return "Hello";
+        }
     }
 }

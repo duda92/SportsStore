@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using SportsStore.WebUI.Infrastructure;
+using SportsStore.Domain.Entities;
+using SportsStore.WebUI.Binders;
 
 namespace SportsStore.WebUI
 {
@@ -79,6 +81,12 @@ namespace SportsStore.WebUI
                             "Page{page}", // URL with parameters
                             new { controller = "Product", action = "List" } // Parameter defaults
                         );
+
+            routes.MapRoute(
+                            null, // Route name
+                            "{controller}/{action}", // URL with parameters
+                            new { controller = "Cart"} // Parameter defaults
+                        );
         }
 
         protected void Application_Start()
@@ -87,6 +95,8 @@ namespace SportsStore.WebUI
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder()); 
 
             ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
         }

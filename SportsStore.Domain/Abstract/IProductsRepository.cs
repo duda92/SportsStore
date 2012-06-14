@@ -6,8 +6,8 @@ using SportsStore.Domain.Entities;
 
 namespace SportsStore.Domain.Abstract
 {
-    public class IProductRepository
+    public interface IProductRepository
     {
-        public virtual IQueryable<Product> Products { get; set; }
+        IQueryable<Product> Products { get; }
     }
 }
