@@ -42,10 +42,5 @@ namespace SportsStore.WebUI.Controllers
             return View(viewModel);
         }
 
-        [HttpPost]
-        public string Hello()
-        {
-            return "Hello";
-        }
     }
 }
